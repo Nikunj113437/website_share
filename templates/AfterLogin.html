@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: calc(50% - 40px);
+            max-width: 300px;
+            height: 200px;
+            background-color: #2262b5;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="box-content">
+                <h2>Quantum Intelligence Tools</h2>
+                <ul>
+                    <li>Quantum Computing Algorithms</li>
+                    <li>Quantum Machine Learning</li>
+                    <li>Quantum Data Analysis</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Data Analysis Tool</h2>
+                <ul>
+                    <li>Statistical Analysis</li>
+                    <li>Data Visualization</li>
+                    <li>Big Data Processing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Machine Learning</h2>
+                <ul>
+                    <li>Supervised Learning</li>
+                    <li>Unsupervised Learning</li>
+                    <li>Reinforcement Learning</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Generative AI</h2>
+                <ul>
+                    <li>Generative Adversarial Networks (GANs)</li>
+                    <li>Variational Autoencoders (VAEs)</li>
+                    <li>Transformers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

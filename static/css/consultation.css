@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 40%;
+    /* Adjust the height as needed */
+    background-color: #f4f4f4;
+    /* Optional: set a background color for the header section */
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.allign-text_1 {
+    position: absolute;
+    bottom: 25%;
+    right: -5%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #10386b;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+}
+
+.required::after {
+    content: ' *';
+    color: red;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 55px;
+    /* background-color: #00bbf0; */
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    margin-top: 15px;
+}
+
+.bg_color:hover {
+    background-color: #2262b5;
+}
+
+.bg_color {
+    background-color: #4678ce;
+}
