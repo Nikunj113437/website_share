@@ -1,5 +1,4 @@
 import MySQLdb
-
 db_config = {
     'host': 'localhost',
     'user': 'root',
