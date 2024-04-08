@@ -1,114 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        body {
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-        }
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/static/images/favicon.png" type="">
+    <title> Company Name</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/static/css/style_afterLogin.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="http://127.0.0.1:8000/static/css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/static/images/favicon.png" type="">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/css/b.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            margin-top: 50px;
-        }
 
-        .box {
-            width: calc(50% - 40px);
-            max-width: 300px;
-            height: 200px;
-            background-color: #2262b5;
-            margin: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .box:hover {
-            transform: scale(1.05);
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .box-content {
-            padding: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-            color: #333;
-        }
-    </style>
 </head>
+<header class="header_section">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="http://127.0.0.1:8000">
+                <span>
+                    Company
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://127.0.0.1:8000"><i class="fa fa-house-user"></i>&nbsp;Home<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/about/"><i
+                                class="fa-solid fa-info-circle"></i>&nbsp;About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/service"><i
+                                class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/consultation" style="color:#00bbf0"><i
+                                class="fa-regular fa-comment-dots"></i>&nbsp;Let's
+                            Connect</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/login/"><i class="fa fa-user"
+                                aria-hidden="true"></i>&nbsp;Explore</a>
+                    </li>
+                    <form class="form-inline">
+                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
 
 <body>
+    <section class="section section-services">
+        <div class="container">
+            <h2 class="common-heading">Our Services</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ex
+                dolores tempore possimus, mollitia vero quas
+            </p>
+        </div>
 
-    <div class="container">
-        <div class="box">
-            <div class="box-content">
-                <h2>Quantum Intelligence Tools</h2>
-                <ul>
-                    <li>Quantum Computing Algorithms</li>
-                    <li>Quantum Machine Learning</li>
-                    <li>Quantum Data Analysis</li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Data Analysis Tool</h2>
-                <ul>
-                    <li>Statistical Analysis</li>
-                    <li>Data Visualization</li>
-                    <li>Big Data Processing</li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Machine Learning</h2>
-                <ul>
-                    <li>Supervised Learning</li>
-                    <li>Unsupervised Learning</li>
-                    <li>Reinforcement Learning</li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Generative AI</h2>
-                <ul>
-                    <li>Generative Adversarial Networks (GANs)</li>
-                    <li>Variational Autoencoders (VAEs)</li>
-                    <li>Transformers</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        <div class="container grid grid-two-column">
+            <div class="service-box" onclick="flipClass(this)">
 
+                <div class="face front">
+                    <ion-icon name="desktop-sharp" class="service-icon"></ion-icon>
+                    <h3>Descriptive Analytics</h3>
+                    <p>
+                        “Descriptive analytics helps a business understand how it is performing by providing context to
+                        help stakeholders interpret information.”
+                    </p>
+                </div>
+                <div class="face back">
+                    <h3>Select Service</h3>
+                    <div class="dropdown-container">
+                        <select id="service-select" onclick="stopPropagation(event)">
+                            <option value="service1">Service 1</option>
+                            <option value="service2">Service 2</option>
+                            <option value="service3">Service 3</option>
+                            <option value="service4">Service 4</option>
+                        </select>
+                    </div>
+                    <button class="button-move" onclick="submitService(); stopPropagation(event)">Submit</button>
+                </div>
+            </div>
+
+
+            <div class="service-box" onclick="flipClass(this)">
+                <div class="face front">
+                    <ion-icon name="search-outline" class="service-icon"></ion-icon>
+                    <h3>Diagnostic Analytics</h3>
+                    <p>
+                        “Diagnostic analytics takes descriptive data a step further and provides deeper analysis to
+                        answer the question: Why did this happen?”
+                    </p>
+                </div>
+                <div class="face back">
+                    <h3>Select Service</h3>
+                    <div class="dropdown-container">
+                        <select id="service-select" onclick="stopPropagation(event)">
+                            <option value="service1">Service 1</option>
+                            <option value="service2">Service 2</option>
+                            <option value="service3">Service 3</option>
+                            <option value="service4">Service 4</option>
+                        </select>
+                    </div>
+
+                    <button class="button-move" onclick="submitService(); stopPropagation(event)">Submit</button>
+
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipClass(this)">
+                <div class="face front">
+                    <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
+                    <h3>Predictive Analytics</h3>
+                    <p>
+                        “Predictive analytics takes historical data and feeds it into a machine learning model that
+                        considers key trends and patterns.”
+                    </p>
+                </div>
+                <div class="face back">
+                    <h3>Select Service</h3>
+                    <div class="dropdown-container">
+                        <select id="service-select" onclick="stopPropagation(event)">
+                            <option value="service1">Service 1</option>
+                            <option value="service2">Service 2</option>
+                            <option value="service3">Service 3</option>
+                            <option value="service4">Service 4</option>
+                        </select>
+                    </div>
+
+                    <button class="button-move" onclick="submitService(); stopPropagation(event)">Submit</button>
+
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipClass(this)">
+                <div class="face front">
+                    <ion-icon name="bar-chart-outline" class="service-icon"></ion-icon>
+                    <h3>Prescriptive Analytics</h3>
+                    <p>
+                        “Prescriptive analytics takes predictive data to the next level. Now that you have an idea of
+                        what will likely happen in the future, what should you do?”
+                    </p>
+                </div>
+                <div class="face back">
+                    <h3>Select Service</h3>
+                    <div class="dropdown-container">
+                        <select id="service-select" onclick="stopPropagation(event)">
+                            <option value="service1">Service 1</option>
+                            <option value="service2">Service 2</option>
+                            <option value="service3">Service 3</option>
+                            <option value="service4">Service 4</option>
+                        </select>
+                    </div>
+
+                    <button class="button-move" onclick="submitService(); stopPropagation(event)">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function flipClass(element) {
+            element.classList.toggle('flip');
+        }
+
+        function submitService() {
+            var selectedService = document.getElementById("service-select").value;
+            alert("Selected service: " + selectedService);
+        }
+
+        function stopPropagation(event) {
+            event.stopPropagation();
+        }
+    </script>
 </body>
 
 </html>

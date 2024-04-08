@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request, status
+from fastapi import FastAPI, HTTPException, Request, status, Response, Cookie
 from fastapi.responses import HTMLResponse
 from schemas.index import User, Validate, ConsultationForm
 from fastapi.templating import Jinja2Templates
@@ -10,15 +10,19 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+# Constants for cookie settings
+COOKIE_EXPIRATION_DAYS = 15
 
 # Signup
+
+
 @app.get("/signup/")
 async def read_signup(request: Request):
     return templates.TemplateResponse("login_signup.html", {"request": request})
 
 
 @app.post("/signup/")
-async def signup(request: Request):
+async def signup(request: Request, response: Response):
     try:
         form = await request.form()
         user = dict(form)
@@ -40,6 +44,12 @@ async def signup(request: Request):
         conn.commit()
         cursor.close()
         response_message = {"message": "Signup Successful!"}
+        # Set a cookie for user's email with expiration
+        response.set_cookie(
+            key="user_email", value=user["email"], expires=COOKIE_EXPIRATION_DAYS)
+        # Set a persistent cookie for "remember me"
+        response.set_cookie(key="remember_me", value="true",
+                            max_age=COOKIE_EXPIRATION_DAYS * 24 * 60 * 60)
         return response_message
 
     except Exception as e:
@@ -48,12 +58,15 @@ async def signup(request: Request):
 
 # Login
 @app.get("/login/")
-async def read_login(request: Request):
+async def read_login(request: Request, user_email: str = Cookie(None), remember_me: str = Cookie(None)):
+    if user_email or remember_me:
+        return templates.TemplateResponse("AfterLogin.html", {"request": request})
+
     return templates.TemplateResponse("login_signup.html", {"request": request})
 
 
 @app.post("/login/")
-async def login(request: Request):
+async def login(request: Request, response: Response):
     try:
         form = await request.form()
         user = dict(form)
@@ -68,6 +81,12 @@ async def login(request: Request):
         result = cursor.fetchone()
         cursor.close()
         if result:
+            # Set a cookie for user's email with expiration
+            response.set_cookie(
+                key="user_email", value=user["email"], expires=COOKIE_EXPIRATION_DAYS)
+            # Set a persistent cookie for "remember me"
+            response.set_cookie(key="remember_me", value="true",
+                                max_age=COOKIE_EXPIRATION_DAYS * 24 * 60 * 60)
             return {"message": "Login successful!"}
         else:
             return {"message": "Email or Password are incorrect!"}
