@@ -25,7 +25,7 @@ document.getElementById('signup_form').addEventListener('submit', function (even
       // alert(message);
       form.reset();
       if (message == "Signup Successful!") {
-        window.location.href = 'http://127.0.0.1:8000/after_login/';
+        window.location.href = 'http://16.171.166.55/after_login/';
       }
     } else {
       alert('An error occurred. Please try again.');
@@ -48,7 +48,7 @@ document.getElementById('login_form').addEventListener('submit', function (event
       // alert(message);
       form.reset();
       if (message == "Login successful!") {
-        window.location.href = 'http://127.0.0.1:8000/after_login/';
+        window.location.href = 'http://16.171.166.55/after_login/';
       }
     } else {
       alert('An error occurred. Please try again.');

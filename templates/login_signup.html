@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="http://127.0.0.1:8000/static/css/style_login_signup.css" />
+	<link rel="stylesheet" href="http://16.171.166.55/static/css/style_login_signup.css" />
 	<title>Company Name</title>
 </head>
 
@@ -14,7 +14,7 @@
 		<div class="forms-container">
 			<div class="signin-signup">
 				<form action="/login/" method="post" class="sign-in-form" id="login_form">
-					<h2 class="title logo"><img src="http://127.0.0.1:8000/static/images/about-img.png" alt=""
+					<h2 class="title logo"><img src="http://16.171.166.55/static/images/about-img.png" alt=""
 							height="35px" width="40px">&nbsp;Sign in</h2>
 					<div class="input-field">
 						<i class="fas fa-user"></i>
@@ -42,7 +42,7 @@
 					</div>
 				</form>
 				<form action="/signup/" method="post" class="sign-up-form" id="signup_form">
-					<h2 class="title"><img src="http://127.0.0.1:8000/static/images/about-img.png" alt="" height="35px"
+					<h2 class="title"><img src="http://16.171.166.55/static/images/about-img.png" alt="" height="35px"
 							width="40px">&nbsp;Sign up</h2>
 					<div class="input-field">
 						<i class="fas fa-user"></i>
@@ -92,7 +92,7 @@
 						Sign up
 					</button>
 				</div>
-				<img src="http://127.0.0.1:8000/static/images/log.svg" class="image" alt="" />
+				<img src="http://16.171.166.55/static/images/log.svg" class="image" alt="" />
 			</div>
 			<div class="panel right-panel">
 				<div class="content">
@@ -105,7 +105,7 @@
 						Sign in
 					</button>
 				</div>
-				<img src="http://127.0.0.1:8000/static/images/register.svg" class="image" alt="" />
+				<img src="http://16.171.166.55/static/images/register.svg" class="image" alt="" />
 			</div>
 		</div>
 	</div>
@@ -138,7 +138,7 @@
 					alert(message);
 					form.reset();
 					if (message == "Signup Successful!") {
-						window.location.href = 'http://127.0.0.1:8000/after_login/';
+						window.location.href = 'http://16.171.166.55/after_login/';
 					}
 				} else {
 					alert('An error occurred. Please try again.');
@@ -161,7 +161,7 @@
 					alert(message);
 					form.reset();
 					if (message == "Login successful!") {
-						window.location.href = 'http://127.0.0.1:8000/after_login/';
+						window.location.href = 'http://16.171.166.55/after_login/';
 					}
 				} else {
 					alert('An error occurred. Please try again.');
